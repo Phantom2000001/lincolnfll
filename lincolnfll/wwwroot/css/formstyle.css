@@ -1,0 +1,167 @@
+@font-face {
+
+    font-family: friendly;
+    
+    src: url(Fonts/static/OpenSans/OpenSans-Light.ttf);
+    
+    }
+
+*{
+    font-family: friendly;
+    text-align: center;
+}
+
+#bg
+{
+    width: 100%;
+    height: 100%;
+    background-image: url(Images/8.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5pt);
+    position: absolute;
+    z-index: -1;
+}
+
+input, .input
+{
+    position: relative;
+    height: 25pt;
+    background-color: transparent;
+    border-width: 2pt;
+    animation-name: deselect;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    border-left:  none;
+    border-top:  none;
+    border-right: none;
+    color: purple;
+    font-size: medium;
+    font-weight: 800;
+    text-align: left;
+}
+
+input:focus, input:hover, .input:focus, .input:hover { 
+    cursor: text;
+    outline: none !important;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    animation-name: select;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+html,body {
+    height:100%;
+    width:100%;
+    margin:0;
+}
+body {
+    display:flex;
+}
+#in
+{
+    position: relative;
+    /*top: 25%;*/
+}
+
+@keyframes select {
+    from {border-color: grey;}
+    to {border-color: royalblue;}
+}
+
+@keyframes deselect {
+    from {border-color: royalblue;}
+    to {border-color: grey;}
+}
+
+@keyframes submit {
+    from {transform: scale(1);}
+    to {transform: scale(1.2)}
+}
+
+@keyframes submitover {
+    from {transform: scale(1.2);}
+    to {transform: scale(1)}
+}
+
+#form {
+    margin:auto;
+    background-color: rgb(161, 161, 255, 0.5);
+    width: 250pt;
+    height: 500pt;
+    border-radius: 25pt;
+    filter: invert(100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+
+}
+
+#save
+{
+    position: relative;
+    width: auto;
+    background-color: #FF7FFF;
+    color: black;
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    text-align: center;
+    font-size: medium;
+    animation-name: submitover;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#save:focus, #save:hover {
+    cursor: pointer;
+    animation-name: submit;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#Team {
+    width: 100pt;
+    height: 25pt;
+    background-color: rgb(161, 161, 255, 0.1);
+    border: none;
+    color: black;
+    border: none;
+    animation-name: submitover;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#Team:hover, #Team:focus {
+    animation-name: submit;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+option:hover {
+    background-color: royalblue;
+    color: black;
+    border: none;
+    animation-name: submit;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+  
+option {
+    background-color: black;
+    color: white;
+    animation-name: deselect;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+span
+{
+    font-weight: bolder;
+}

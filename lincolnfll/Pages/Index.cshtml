@@ -1,0 +1,88 @@
+@page
+
+@{
+  Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+@model lincolnfll.Pages.EditNewsModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="StaticImages/favicon.ico" type="image/x-icon">
+    <title>Loading</title>
+    <style>
+        @@font-face {
+            font-family: Open Sans;
+            src: url(Fonts/static/OpenSans/OpenSans-Light.ttf);
+        }
+        
+        * {
+            font-family: Open Sans, sans-serif;
+        }
+        
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            overflow: hidden;
+        }
+        
+        progress {
+            width: 50%;
+            height: 20%;
+            text-align: center;
+            display: block;
+        }
+        
+        #prog {
+            position: relative;
+            right: 25vw;
+            color: black;
+        }
+        
+        #header {
+            color: white;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">Loading Website:&nbsp;</h1><br>
+    <progress id="pro" value="0" max="100"></progress>
+    <center><h1 id="prog"></h1></center>
+    @{
+        int i = 0;
+        foreach(var file in Directory.GetFiles(System.IO.Path.Combine(Model.env.WebRootPath, "News")))
+        {
+            i++;
+        }
+
+    }
+    <form>
+        <iframe src="?" id="hidden" style="border: 0pt; width: 0pt; height: 0pt; background-color: clear;"></iframe>
+    </form>
+    <script>
+        var i = 0;
+        setInterval(function () {if(i >= 100){window.location = 'main';} else {i+=0.5; document.getElementById('pro').value = i;}}, 0);
+        setInterval(function() {document.getElementById('prog').innerHTML = (Math.floor(document.getElementById('pro').value)+'%');}, 0);
+
+        for(var i = 0; i < @i; i++) {
+            document.getElementById("Hidden").src = $`News/{i}.json`
+        }
+        for(var i = 0; i < 64; i++) {
+            document.getElementById("Hidden").src = $`Images/{i}.json`
+        }
+        for(var i = 0; i < 3; i++) {
+            document.getElementById("Hidden").src = $`Video/{i}.json`
+        }
+
+        document.getElementById("Hidden").src = "Fonts/static/OpenSans/OpenSans-Light.ttf";
+    </script>
+</body>
+</html>

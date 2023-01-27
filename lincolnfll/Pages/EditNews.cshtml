@@ -1,0 +1,80 @@
+﻿@page
+@model lincolnfll.Pages.EditNewsModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/formstyle.css" rel="stylesheet"/>
+    <title>NewsEditor</title>
+    <style>
+        @@font-face {
+            font-family: Open Sans;
+            src: url(Fonts/static/OpenSans/OpenSans-Light.ttf);
+        }
+        
+        * {
+            font-family: Open Sans, sans-serif;
+        }
+
+        #form {
+            min-height: 500pt;
+            height:auto;
+            padding:2%;
+        }
+    </style>
+</head>
+<body style="align-content:center;">
+    @{
+        if (Request.Method=="POST")
+        {
+            var title = Request.Form["Title"]; 
+            var description = Request.Form["Description"]; 
+            var body = Request.Form["Body"];
+            var type = Request.Form["Type"];
+            int i = 0;
+            foreach(var file in Directory.GetFiles(System.IO.Path.Combine(Model.env.WebRootPath, "News")))
+            {
+                i++;
+            }
+            var store = System.IO.Path.Combine(Model.env.WebRootPath, $"News/{i}.json");
+            var News = new News(title, description, body, Convert.ToInt16(type)); 
+            System.IO.File.WriteAllText(store, Newtonsoft.Json.JsonConvert.SerializeObject(News));
+            Response.Redirect("main");
+        }
+    }
+    <form method="post" id="form" style="filter: invert(0); background-color: #646441">
+        <div id="in">
+            <label for="title">Title</label><br />
+            <input name="Title" id="title" style="color: black;"/>
+            <br />
+            <br />
+            <label for="description">Description</label><br />
+            <input name="Description" id="description" style="color: black;"/>
+            <br />
+            <br />
+            <label for="body">Body</label><br />
+            <textarea name="Body" id="body" class="input" cols=10 rows=5 style="color: black;"></textarea>
+            <br />
+            <br />
+            <label for="body">Type</label><br />
+            <select name="Type" id="type">
+                <option value="0">News</option>
+                <option value="1">Event</option>
+            </select>
+            <br />
+            <br />
+            <input type="submit" id="save" style="background-color: green; color: white;" onclick="alert('NOTE: ALL COMMAS WILL BE OMITTED')"/>
+        </div>
+    </form>
+
+    @*<script>
+    document.getElementById("save").addEventListener("click", function(){ 
+        window.location = "main";
+    }, false);
+    </script>*@
+</body>
+</html>

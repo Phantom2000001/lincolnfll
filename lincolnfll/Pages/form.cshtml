@@ -1,0 +1,84 @@
+@page
+@model lincolnfll.Pages.form
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="~/css/formstyle.css">
+    <link rel="shortcut icon" href="StaticImages/favicon.ico" type="image/x-icon">
+    <style>
+        @@font-face {
+            font-family: Open Sans;
+            src: url(Fonts/static/OpenSans/OpenSans-Light.ttf);
+        }
+        
+        * {
+            font-family: Open Sans, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    @{
+        if(Request.Method == "POST")
+        {
+            Model.GetData();
+        }
+    }
+
+
+    <div id="bg"></div>
+    <div id="form">
+        <form method="post">
+        <div id="in">
+            <label for="First">First Name<span style="color: red;">*</span>:</label><br>
+            <input autocomplete="false" id="First" name="first"><br><br>
+            <label for="Last">Last Name<span style="color: red;">*</span>:</label><br>
+            <input autocomplete="false" id="Last" name="last"><br><br>
+            <label for="Email">Email<span style="color: red;">*</span>:</label><br>
+            <input type="email" autocomplete="false" id="Email" name="email"><br><br><br>
+            <label for="PEmail">Parent Email<span style="color: red;">*</span>:</label><br>
+            <input type="email" autocomplete="false" id="PEmail" name="pemail"><br><br>
+            <label for="Grade">Grade<span style="color: red;">*</span>:</label><br>
+            <input type="number" id="Grade" style="text-align: center;" min="4" max="8" name="grade"><br><br><br>
+            <label for="Team">Choose a team:<span style="color: red;">*</span>:</label><br>
+            <select id="Team" name="team">
+                <option value="junior">Junior</option>
+                <option value="senior">Senior</option>
+            </select><br><br><br>
+            <input type="submit" id="save">
+        </div>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="~/js/formscript.js"></script>
+    
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDFTb1tJxv2n4TxLoqUMLsosN8-gFPihgM",
+    authDomain: "lincolnlego-6989e.firebaseapp.com",
+    projectId: "lincolnlego-6989e",
+    storageBucket: "lincolnlego-6989e.appspot.com",
+    messagingSenderId: "478601412049",
+    appId: "1:478601412049:web:43edf491d6b578de3c74f0",
+    measurementId: "G-GN3J3960VH"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>

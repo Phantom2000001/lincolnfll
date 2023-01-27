@@ -1,0 +1,283 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(~/Fonts/static/OpenSans/OpenSans-Light.ttf);
+}
+
+* {
+    font-family: OpenSans;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    color: gold;
+    font-weight: lighter;
+}
+
+h2 {
+    color: rgba(255, 215, 0, 0.5);
+    font-weight: lighter;
+}
+
+#table {
+    position: relative;
+    left: 70%;
+    top: 0%;
+}
+
+#imaget {
+    position: relative;
+    left: 0%;
+}
+
+#optionlist {
+    position: relative;
+    left: 0%;
+}
+
+body
+{
+    background-color: gold;
+}
+
+@keyframes buttons {
+    from {background-color: maroon; color: gold; transform: scale(1);}
+    to {background-color: gold; color: maroon; transform: scale(1.2);}
+}
+
+@keyframes buttonsexit {
+    from {background-color: gold; color: maroon; transform: scale(1.2);}
+    to {background-color: maroon; color: gold; transform: scale(1);}
+}
+
+@keyframes static {
+    from {transform: scale(1);}
+    to {transform: scale(1.2);}
+}
+
+@keyframes staticexit {
+    from {transform: scale(1.2);}
+    to {transform: scale(1);}
+}
+
+@keyframes newss {
+    from {opacity: 1; transform: scale(1);}
+    to {opacity: 0.5; transform: scale(1.2);}
+}
+
+@keyframes newssexit {
+    from {opacity: 0.5; transform: scale(1.2);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+.circle:hover, .menu:hover, .actions:hover {
+    animation-name: buttons;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.actions:hover {
+    border: 1px solid maroon;
+}
+
+.circle, .menu, .actions {
+    animation-name: buttonsexit;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    text-align: center;
+}
+
+.menu {
+    margin-top: 20%;
+    margin-right: 2vw;
+    text-align: center;
+    font-size: 12pt;
+}
+
+body::-webkit-scrollbar {
+    background-color: #e3c812;
+}
+ 
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background-color: maroon;
+    animation-name: newssexit;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/*
+
+#newsbtn {
+    margin-right: 0;
+}
+*/
+
+.actions, .static {
+   margin-right: 2vw; 
+}
+
+.static:hover {
+    animation-name: static;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.static {
+    animation-name: staticexit;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.n:hover {
+    animation-name: newss;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.n {
+    animation-name: newssexit;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#slides{
+    text-align: center;
+}
+
+#slide {
+    width: 50vw;
+    height: 350pt;
+}
+
+#slide1 {
+    top: 250pt;
+    left: 500pt;
+    width: 25vw;
+    height: 350pt;
+}
+#slide2 {
+    top: 250pt;
+    right: 500pt;
+    width: 25vw;
+    height: 350pt;
+}
+
+button {
+    color: gold;
+    background-color: maroon;
+    border: none;
+    width: 50pt;
+    height: 25pt;
+}
+
+#header, .n {
+    position: sticky;
+    -webkit-box-shadow: 0 1px 10px -6px rgb(0 0 0 / 42%), 0 1px 10px 0 rgb(0 0 0 / 50%), 0 4px 5px -2px rgb(0 0 0 / 50%);
+}
+
+.circle, .notcircle
+{
+    width: 50pt;
+    height: 50pt;
+    border-radius: 25pt;
+}
+
+.circle {
+    cursor: pointer;
+}
+
+.notcircle {
+    cursor: default;
+}
+
+.actions {
+    width: 100pt;
+    height: 25pt;
+    border-radius: 4pt;
+}
+
+/*
+#hidden {
+    width: 0;
+    height: 0;
+    background-color: gold;
+    color: gold;
+    border-width: 0pt;
+}
+*/
+
+.n {
+    border-radius: 10pt;
+    background-color: white;
+    color: black;
+    border-color: white;
+    width: 200pt;
+    text-align: center;
+    margin-bottom: 50pt;
+}
+
+#NewsSnippets {
+    background-color: maroon;
+}
+
+.black {
+    color: black;
+}
+
+#bwd {
+    position: relative;
+    right: 30%;
+    border-color: gold;
+    border-width: thin;
+}
+
+#one {
+    position: relative;
+    right: 25%;
+}
+
+#two {
+    position: relative;
+    text-align: center;
+}
+
+#three {
+    position: relative;
+    left: 25%;
+}
+
+#fwd {
+    position: relative;
+    left: 30%;
+    border-color: gold;
+    border-width: thin;
+}
+
+strong {
+    font-weight: bolder;
+}
+
+.info {
+    background-color: maroon;
+    color: gold;
+    width: 25vw;
+    text-align: center;
+}
+
+#Sumobots {
+    background-color: gold;
+    color: maroon;
+    width: 25vw;
+    text-align: center;
+}
+
+li {
+    margin-bottom: 3vh;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,89 @@
+@page
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="shortcut icon" href="StaticImages/favicon.ico" type="image/x-icon">
+    <title>Awards and History</title>
+    <style>
+        button:hover {
+            border: 1px solid maroon;
+        }
+        
+        button {
+            border-radius: 4pt;
+        }
+
+        @@font-face {
+            font-family: Open Sans;
+            src: url(Fonts/static/OpenSans/OpenSans-Light.ttf);
+        }
+        
+        * {
+            font-family: Open Sans, sans-serif;
+        }
+    </style>
+</head>
+<body style="margin: 0pt; padding: 0pt;">
+    <div id="header" style="z-index: 1000000; position: sticky; top: 0pt; background-color: rgba(128, 0, 0, 1); height: 10vh; width: 200vw;">
+        <div id="icons" style="padding-left: 5%;">
+            <button class="static" style="z-index: 100000000000; position: relative; width: 5vw; height: 2vh;" onclick="window.open('https://www.gcsnc.com/Academy_at_Lincoln')"><img width="50" height="61" src="StaticImages/Academy at Lincoln.png"></button><button onclick="window.open('https://www.firstnorthcarolina.org/2021-22-fll-explore-events')" class="static" style="z-index: 100000000000; position: relative; width: 5vw; height: 2vh;"><img src="StaticImages/fll-logo-horizontal.png" width="100pt" height="50pt" class="static"></button></div>
+    <div style="position: relative; bottom: 50pt; right: 70vw;">
+    <table id="table">
+        <tr><th><a href="form"><button class="menu">Register</button></a></th><th><a href="calendar"><button class="menu">Calendar</button></a></th><th><a href="contact"><button class="menu">Contact</button></a></th></tr>
+    </table>
+    </div>
+    </div>    
+    <div><center><h1 style="color: maroon;">Awards and History</h1></center>
+    During the 2021-2022 FLL season, we have had a team for the 7<sup>th</sup> and 8<sup>th</sup> grades. The 7<sup>th</sup> grade team, which included one 5<sup>th</sup> grader made a presentation about the possibility of making mushroom-based packaging. The theme was Cargo Connect, and so they wanted to make more ecofriendly packaging that didn’t hurt the environment like cardboard and plastic did. They made a robot and got 18<sup>th</sup> place in the state competition and 4<sup>th</sup> place in the regional competition. The 8<sup>th</sup> grade team worked on a way to improve logistics by improving the last mile. They got 3<sup>rd</sup> place in the regioanl competition and 7<sup>th</sup> place in the state competition. The 7<sup>th</sup> grade team got 2<sup>nd</sup> place in robot design in the regional competition and the 8<sup>th</sup> grade team got 1st place in robot design in the regional competition.<br>
+    <center style="margin-top: 4vh;"><img src="Images/17.png" width="350" height="200" style="margin-right: 5vw">
+        <img src="Images/18.png" width="350" height="200"><br><caption><em><b>Left:</b></em> Primal Python, the 8<sup>th</sup> grade team and <em><b>Right:</b></em> Omelette Bros?, the 7<sup>th</sup> grade team</caption></center>
+    <a href="main" style="position:relative; bottom: 20vh;"><button class="menu" style="width: auto; height: auto; margin-left: 2vw;">Back to Main Page</button></a>
+    </div>
+    
+    <script>
+        var orig_res = [1536, 746];
+
+        function check_res() {
+            var res = [window.innerWidth, window.innerHeight];
+            console.log(res[0]);
+            if(res[0] < orig_res[0]) {
+                document.body.style.overflowX = 'scroll';
+            } else {
+                document.body.style.overflowX = 'hidden';
+            }
+        }
+
+        window.onload = check_res;
+        window.onresize = check_res;
+    </script>
+    
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDFTb1tJxv2n4TxLoqUMLsosN8-gFPihgM",
+    authDomain: "lincolnlego-6989e.firebaseapp.com",
+    projectId: "lincolnlego-6989e",
+    storageBucket: "lincolnlego-6989e.appspot.com",
+    messagingSenderId: "478601412049",
+    appId: "1:478601412049:web:43edf491d6b578de3c74f0",
+    measurementId: "G-GN3J3960VH"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>

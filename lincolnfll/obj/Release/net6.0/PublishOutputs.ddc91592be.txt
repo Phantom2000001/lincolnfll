@@ -1,0 +1,15 @@
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\lincolnfll.exe
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\lincolnfll.dll
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\lincolnfll.deps.json
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\lincolnfll.runtimeconfig.json
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\lincolnfll.pdb
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\System.Web.Mvc.dll
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\System.Web.Razor.dll
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\System.Web.Helpers.dll
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\System.Web.WebPages.Deployment.dll
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\System.Web.WebPages.Razor.dll
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\System.Web.WebPages.dll
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\Microsoft.Web.Infrastructure.dll
+D:\repos\lincolnfll\lincolnfll\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
